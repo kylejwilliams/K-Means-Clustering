@@ -65,18 +65,7 @@ public class Application extends JPanel {
          g2.drawLine(x0, y0, x1, y1);
       }
 
-      Stroke oldStroke = g2.getStroke();
-      g2.setColor(GRAPH_COLOR);
-      g2.setStroke(GRAPH_STROKE);
-      for (int i = 0; i < graphPoints.size() - 1; i++) {
-         int x1 = graphPoints.get(i).x;
-         int y1 = graphPoints.get(i).y;
-         int x2 = graphPoints.get(i + 1).x;
-         int y2 = graphPoints.get(i + 1).y;
-         //g2.drawLine(x1, y1, x2, y2);         
-      }
-
-      g2.setStroke(oldStroke);      
+      g2.setStroke(GRAPH_STROKE);     
       g2.setColor(GRAPH_POINT_COLOR);
       for (int i = 0; i < graphPoints.size(); i++) {
          int x = graphPoints.get(i).x - GRAPH_POINT_WIDTH / 2;
